@@ -903,35 +903,11 @@
     </div>
 
     <!-- newsletter section starts  -->
-
     <section id="newsletter">
-      <div class="container">
-        <div class="row text-center mb-3">
-          <div class="col">
-            <h1>Form Pembelian</h1>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-md-6">
-            <form name="barang">
-              <div class="mb-3">
-                <label for="name" class="form-label" style="font-size: 2rem; color: #fff">Nama</label>
-                <input type="text" class="form-control" id="name" aria-describedby="nama" name="nama" style="font-size: 1rem" />
-              </div>
-              <div class="mb-3">
-                <label for="email" class="form-label" style="font-size: 2rem; color: #fff">Nomer Whatsapp</label>
-                <input type="email" class="form-control" id="email" aria-describedby="Nomer Whatsapp" name="email" style="font-size: 1rem" />
-              </div>
-              <div class="mb-3">
-                <label for="pesan" class="form-label" style="font-size: 2rem; color: #fff">Alamat</label>
-                <textarea class="form-control" id="pesan" rows="3" name="alamat" style="font-size: 3rem"></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary" style="font-size: 2rem">Submit</button>
-            </form>
-          </div>
-        </div>
-      </div>
+      <h1>Order Via WhatsApp</h1>
+      <a href="pengisian.html"><button class="button">Pergi Sekarang</button></a>
     </section>
+
     <!-- newsletter section ends -->
 
     <!-- footer section starts  -->
@@ -994,18 +970,5 @@
     </script>
 
     <!-- Akhir Dark Mode -->
-
-    <!-- From google sheet -->
-    <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbyzJztj6CaLrizxc22APXrVxLKB06jBbC2M6E6W3BzhZOUPSYfOZNEm4DB0dO6dz_ev/exec';
-      const form = document.forms['barang'];
-
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-          .then((response) => console.log('Success!', response))
-          .catch((error) => console.error('Error!', error.message));
-      });
-    </script>
   </body>
 </html>
